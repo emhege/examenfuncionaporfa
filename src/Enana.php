@@ -14,18 +14,12 @@ class Enana
         $this->nombre = $a1;
         $this->puntosVida = $a2;
 
-        switch ($this->puntosVida) {
-            case($this->puntosVida > 0):
-                $this->situacion = "viva";
-                break;
-
-            case($this->puntosVida == 0):
-                $this->situacion = "limbo";
-                break;
-
-            case($this->puntosVida < 0):
-                $this->situacion = "muerta";
-                break;
+        if ($this->puntosVida > 0) {
+            $this->situacion = "viva";
+        } elseif ($this->puntosVida == 0) {
+            $this->situacion = "limbo";
+        } else {
+            $this->situacion = "muerta";
         }
     }
 
