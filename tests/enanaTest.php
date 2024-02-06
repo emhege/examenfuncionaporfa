@@ -13,16 +13,16 @@ class EnanaTest extends TestCase {
         $enanaViva = new Enana('Manuela',2);
         $vidaViva = $enanaViva->getSituacion();
 
-       /*  $enanaMuerta = new Enana('Rogelia',-2);
-        $vidaMuerta = $enanaMuerta->getSituacion(); */
+        $enanaMuerta = new Enana('Rogelia',-2);
+        $vidaMuerta = $enanaMuerta->getSituacion();
 
-        $enanaLimbo = new Enana('Rogelia',0);
-        $vidaLimbo = $enanaLimbo->getSituacion();
+        /* $enanaLimbo = new Enana('Rogelia',0);
+        $vidaLimbo = $enanaLimbo->getSituacion(); */
 
 
         $this->assertEquals('viva', $vidaViva);
-        /* $this->assertEquals('muerta', $vidaMuerta); */
-        $this->assertEquals('limbo', $vidaLimbo);
+        $this->assertEquals('muerta', $vidaMuerta);
+        /* $this->assertEquals('limbo', $vidaLimbo); */
 
         
     }
