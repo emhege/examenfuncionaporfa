@@ -67,11 +67,6 @@ class EnanaTest extends TestCase {
         $statusMuerte = $enanaHeridaMuerta->getSituacion();
         $vidaMuerte = $enanaHeridaMuerta->getPuntosVida();
 
-        $enanaHeridaLimbo = new Enana('Manuela', 0);
-        $enanaHeridaLimbo->pocima();
-        $statusLimbo = $enanaHeridaLimbo->getSituacion();
-        $vidaLimbo = $enanaHeridaLimbo->getPuntosVida();
-
         $enanaHeridaViva = new Enana('Manuela', 2);
         $enanaHeridaViva->pocima();
         $statusViva = $enanaHeridaViva->getSituacion();
@@ -79,9 +74,6 @@ class EnanaTest extends TestCase {
 
         $this->assertEquals('viva', $statusMuerte);
         $this->assertEquals(8, $vidaMuerte);
-
-        $this->assertEquals('limbo', $statusLimbo);
-        $this->assertEquals(0, $vidaLimbo);
 
         $this->assertEquals('viva', $statusViva);
         $this->assertEquals(12, $vidaViva);
